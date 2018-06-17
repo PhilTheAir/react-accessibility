@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders the home page structure 1`] = `
+<Styled(Flex)
+  alignItems="center"
+  justify="center"
+>
+  <LinkIcon
+    icon={<IoSocialAndroid />}
+    key="Android"
+    link="https://www.android.com"
+    title="Android"
+  />
+  <LinkIcon
+    icon={<IoSocialNodejs />}
+    key="Node.js"
+    link="https://nodejs.org/en/"
+    title="Node.js"
+  />
+  <LinkIcon
+    icon={<IoSocialGithub />}
+    key="GitHub"
+    link="https://github.com"
+    title="GitHub"
+  />
+</Styled(Flex)>
+`;

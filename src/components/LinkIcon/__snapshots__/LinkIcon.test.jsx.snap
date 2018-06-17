@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkIcon should render 1`] = `
+.c0 {
+  font-size: 64px;
+  margin: 24px;
+  border: none;
+  background: none;
+}
+
+.c0:hover {
+  cursor: pointer;
+  color: pink;
+}
+
+<SubscribedComponent
+  aria-label="Android"
+  className="c0"
+  is="button"
+  onClick={[Function]}
+  role="link"
+  tabIndex={0}
+  title="Android"
+>
+  <IoSocialAndroid />
+</SubscribedComponent>
+`;
