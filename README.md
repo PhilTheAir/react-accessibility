@@ -1,2 +1,2 @@
-## React implements Accessibility with styled HOC
+## React + Accessibility + HOC + Styled Components + React Router
 

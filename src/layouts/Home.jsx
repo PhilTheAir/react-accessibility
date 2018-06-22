@@ -1,8 +1,8 @@
 import React from 'react';
-import PageContainer from '../containers/PageContainer';
+import HomeContainer from '../containers/HomeContainer';
 
 const Home = props => (
-  <PageContainer />
+  <HomeContainer />
 );
 
 export default Home;

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Flex } from 'grid-styled';
 import styled from 'styled-components';
+import * as Ionicons from 'react-icons/lib/io';
+import { withRouter } from 'react-router-dom';
 import { withAccessibleFocusStyle } from '../../utils';
 
 const IconWrapper = styled(withAccessibleFocusStyle(Flex))`
@@ -14,17 +17,38 @@ const IconWrapper = styled(withAccessibleFocusStyle(Flex))`
   }
 `;
 
-const LinkIcon = ({ title, link, icon }) => (
-  <IconWrapper
-    title={title}
-    onClick={() => { window.location.href = link }}
-    is="button"
-    role="link"
-    aria-label={title}
-    tabIndex={0}
-  >
-    {icon}
-  </IconWrapper>
-)
+class LinkIcon extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    icon: PropTypes.object.isRequired,
+  };
 
-export default LinkIcon;
+  static defaultProps = {
+    title: '',
+    link: '/',
+    icon: <Ionicons.IoIosStarOutline />,
+  };
+
+  buttonClicked = link => {
+    this.props.history.push(link);
+  }
+
+  render() {
+    const { title, link, icon } = this.props;
+    return (
+      <IconWrapper
+        title={title}
+        onClick={() => this.buttonClicked(link)}
+        is="button"
+        role="link"
+        aria-label={title}
+        tabIndex={0}
+      >
+        {icon}
+      </IconWrapper>
+    )
+  }
+}
+
+export default withRouter(LinkIcon);
